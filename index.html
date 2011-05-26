@@ -1,19 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <script src="jquery-1.2.6.min.js" type="text/javascript"></script>
-    <script src="client.js" type="text/javascript"></script>
     <title>Elixir</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="http://dl.dropbox.com/u/19897851/stylesheets/elixir.css" />
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="client.js" type="text/javascript"></script>
   </head>
-  <body>
-    <div id="toolbar">
-      <ul id="status">
-        <li><a id="usersLink" href="#">5 users</a></li>
-        <li>uptime: <span id="uptime">?</span></li>
-        <li>memory: <span id="rss">?</span>mb RSS</li>
-      </ul>
-      <input tabindex="1" type="text" id="entry"/>
-    </div>
+  <body class="tk-minion-pro">
+    <ul id="status">
+      <li><a id="usersLink" href="#">5 users</a></li>
+      <li>uptime: <span id="uptime">?</span></li>
+      <li>memory: <span id="rss">?</span>mb RSS</li>
+    </ul>
+    <input autofocus tabindex="1" type="text" id="entry"/>
     <div id="app">
       <div id="connect">
         <form action="#">
@@ -27,7 +27,6 @@
             <label for="nick">Name</label>
             <input id="nickInput" class="text"type="text" name="nick" value=""/>
             <input id="connectButton" class="button" type="submit" name="" value="Join"/>
-
           </fieldset>
         </form>
       </div>

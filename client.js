@@ -25,19 +25,23 @@ function roll(notation) {
   var i;
   var modifierLog = "";
 
-  if (elements[3])
-  {
-	attachment = elements[3].match(/[+-]\d+/g);
-	i = attachment.length - 1;
+  if (elements[3]){
+	  attachment = elements[3].match(/[+-]\d+/g);
+	  i = attachment.length - 1;
 
-	for (i; i >= 0; --i)
-		total += attachment[i]*1;
-		
-	modifierLog += elements[3] + " = " + total;
-  }
+	  for (i; i >= 0; --i)
+		  total += attachment[i]*1;
+	
+	modifierLog += elements[3] + " = " + total; }
+	
+	var message = "";
+	
+	if (total>=range){
+	  message=" (CRITICAL SUCCESS)"
+	} else if (total==times) {
+	  message=" (CRITICAL FAILURE)" }
 
-  return result + modifierLog;
-}
+  return result + modifierLog + message; }
   
 //  CUT  ///////////////////////////////////////////////////////////////////
 /* This license and copyright apply to all code until the next "CUT"
@@ -261,10 +265,10 @@ function addMessage (from, text, time, _class) {
   
   var flags = text.match(/(\/\w+).(.+)/);
 
-  if (flags && flags[1] == "/moan"){
-    var content = '<tr><td>ROLANDO MOANS: ' + flags[2] + '</td></tr>'
+  if (flags && flags[1] == "/narrate"){
+    var content = '<tr><td class="narration">' + flags[2] + '</td></tr>'
   } else if (flags && flags[1] == "/roll"){
-    var content = '<tr><td>' + CONFIG.nick + ' rolls "' + flags[2] + '": ' + roll(flags[2]) + '</td></tr>'
+    var content = '<tr><td class="date">' + util.timeString(time) + '</td><td class="nick">' + from + ' rolls "' + flags[2] + '": ' + roll(flags[2]) + '</td><td class="msg-text>.</td></tr>'
   } else {
     var content = '<tr>'
       + '  <td class="date">' + util.timeString(time) + '</td>'
@@ -416,9 +420,9 @@ function showChat (nick) {
 //we want to show a count of unread messages when the window does not have focus
 function updateTitle(){
   if (CONFIG.unread) {
-    document.title = "(" + CONFIG.unread.toString() + ") node chat";
+    document.title = "(" + CONFIG.unread.toString() + ") Elixir";
   } else {
-    document.title = "node chat";
+    document.title = "Elixir";
   }
 }
 

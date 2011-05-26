@@ -123,9 +123,9 @@ setInterval(function () {
 fu.listen(Number(process.env.PORT || PORT), HOST);
 
 fu.get("/", fu.staticHandler("index.html"));
-fu.get("/style.css", fu.staticHandler("style.css"));
+fu.get("/reset.css", fu.staticHandler("reset.css"));
 fu.get("/client.js", fu.staticHandler("client.js"));
-fu.get("/jquery-1.2.6.min.js", fu.staticHandler("jquery-1.2.6.min.js"));
+fu.get("/jquery.js", fu.staticHandler("jquery.js"));
 
 
 fu.get("/who", function (req, res) {
