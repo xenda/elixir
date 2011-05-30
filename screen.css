@@ -1,0 +1,135 @@
+html {
+  background: #bbb;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+body, #entry {
+  background: #fff;
+  color: #666;
+  width: 600px;
+}
+body, table {
+  font-family: georgia, fixed; 
+  font-size: 14px;
+  line-height: 150%;
+}
+
+tr,td,table {
+  padding: 0;
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 1px dotted #ccc;
+}
+table:nth-child(even) {
+  background: #eee;
+}
+td.date, td.nick {
+  font-family: monaco, monospace;
+  font-size: 10px;
+  width: 40px; }
+td.nick {
+  width: 80px; }
+td {
+  padding: 10px 15px;
+}
+td.narration {
+  color: #333;
+}
+
+a { text-decoration: none; color: #888; }
+a:hover { text-decoration: underline; color: #aaa; }
+
+#loading, #connect {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+#loading { z-index: 10000000; }
+#connect { z-index: 10000001; }
+
+#loading p, #connect fieldset  {
+  font-family: georgia, fixed; 
+  width: 30em;
+  border: 0;
+}
+
+#toolbar {
+  position: fixed;
+  color: #fff;
+  width: 100%; 
+  bottom: 0;
+  background: #733;
+}
+
+#entry {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: monaco, monospace;
+  padding: 1em;
+  margin: 0;
+  border-width: 0;
+  border-top: 1px solid #aaa;
+  outline-width: 0;
+  clear: both;
+  color: #666;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#log {
+  display: block;
+  /* enough padding to clear the toolbar.. is there a better way to do this? */
+  padding-bottom: 5.1em; 
+  background: inherit;
+  overflow: hidden;
+}
+
+/* not very important info */
+.notice td, .join td, .part td, .message .date { color: #555; }
+.error td { color: #933; }
+.personal .nick, .notice .nick { color: #c10000; }
+
+.message {
+  margin: 0.1em 0;
+}
+
+.message td {
+  vertical-align: top;
+}
+
+.nick { 
+}
+
+.nick a {
+  color: inherit;
+}
+
+#usersLink {
+  color: inherit;
+}
+#status {
+  position: fixed;
+  top: 0;
+  left: 600px;
+  padding: 10px 20px;
+  font-size: 10px;
+  text-shadow: 1px 1px #ddd;
+  font-family: monaco, monospace;
+}
