@@ -139,7 +139,8 @@ fu.get("/reset.css", fu.staticHandler("reset.css"));
 fu.get("/screen.css", fu.staticHandler("screen.css"));
 fu.get("/client.js", fu.staticHandler("client.js"));
 fu.get("/jquery.js", fu.staticHandler("jquery.js"));
-fu.get("/elixir.png", fu.staticHandler("elixir.png"))
+fu.get("/elixir.png", fu.staticHandler("elixir.png"));
+fu.get("/elixir-chat.png", fu.staticHandler("elixir-chat.png"))
 
 
 fu.get("/who", function (req, res)

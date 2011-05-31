@@ -7,6 +7,7 @@ body {
   margin: 0;
   min-height: 100%;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
 }
 body, #entry {
   background: #fff;
@@ -75,7 +76,7 @@ h1 {
   text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
   margin-top: 0.25em;
 }
-h1, .branding p {
+h1, .branding p,.branding form {
   float: left;
   margin-bottom: 30px;
 }
@@ -154,4 +155,25 @@ h1, .branding p {
   font-size: 10px;
   text-shadow: 1px 1px #ddd;
   font-family: monaco, monospace;
+}
+
+/* Rolls */
+@-webkit-keyframes roll-action {
+  0% {
+    -webkit-transform: scale(2);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; } }
+span.roll-result {
+  -webkit-animation: roll-action 0.25s;
+  display: inline-block;
+  text-align: center;
+  padding: 0 3px;
+  min-width: 14px;
+  background: #c10000;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
