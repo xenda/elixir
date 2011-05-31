@@ -28,12 +28,16 @@ function roll(notation)
 	if (elements[3])
 	{
 		attachment = elements[3].match(/[+-]\d+/g);
-		var i = attachment.length - 1;
 
-		for (i; i >= 0; --i)
-			total += attachment[i] * 1;
+		if (attachment)
+		{
+			var i = attachment.length - 1;
 
-		modifierLog += elements[3] + " = " + total;
+			for (i; i >= 0; --i)
+				total += attachment[i] * 1;
+
+			modifierLog += elements[3] + " = " + total;
+		}
 	}
 
 	var message = total >= range ? " (CRITICAL SUCCESS)"
@@ -282,9 +286,9 @@ function addMessage(from, text, time, _class)
 		messageElement.addClass("personal");
 
 	// replace URLs with links
-	text =  text.replace(util.urlRE, '<a target="_blank" href="$&">$&</a>')
-				.replace(util.bold, '<b>$1</b>')
-				.replace(util.italic, '<i>$1</i>');
+	text =  text.replace(util.bold, '<b>$1</b>')
+				.replace(util.italic, '<i>$1</i>')
+				.replace(util.urlRE, '<a target="_blank" href="$&">$&</a>');
 
 	var flags = text.match(/(\/\w+).(.+)/);
 

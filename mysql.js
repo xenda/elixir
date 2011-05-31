@@ -26,9 +26,11 @@ http.createServer(
 //    console.log(JSON.stringify(results)); // left these in so you can do some console debugging
 
 //For each item do something with the result
-					for (var i in results)
+					var i;
+					var result;
+					for (i in results)
 					{
-						var result = results[i];
+						result = results[i];
 						res.write(result.test + ":"); // Writes to the web browser the value of test then a : to seperate values
 					}
 					res.end(); // end the request.
