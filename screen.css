@@ -73,6 +73,7 @@ h1 {
   line-height: 1.25;
   color: #fff;
   text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+  margin-top: 0.25em;
 }
 h1, .branding p {
   float: left;
