@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Elixir</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="screen.css" />
     <script src="jquery.js" type="text/javascript"></script>
@@ -16,19 +17,21 @@
     <input autofocus tabindex="1" type="text" id="entry"/>
     <div id="app">
       <div id="connect">
-        <form action="#">
-          <fieldset> 
-            <p>
-              This is a chat room. Both the client-side and server-side are
-              written in javascript. The source code is
-              <a href="http://github.com/ry/node_chat/tree/master">here</a>.
-            </p>
-
-            <label for="nick">Name</label>
-            <input id="nickInput" class="text"type="text" name="nick" value=""/>
-            <input id="connectButton" class="button" type="submit" name="" value="Join"/>
-          </fieldset>
-        </form>
+        <header class="branding cleared">
+          <h1 class="ir">Elixir</h1>
+          <p>
+            <big>
+              This is Elixir — an online table-top RPG helper: chat with commands (dice roller and DM stuff), maps (not implemented yet) and user management.
+            </big>
+          </p>
+          <form action="#">
+            <fieldset> 
+              <label class="hidden" for="nick">Name</label>
+              <input id="nickInput" autofocus class="text"type="text" name="nick" value=""/>
+              <input id="connectButton" class="button" type="submit" name="" value="Join"/>
+            </fieldset>
+          </form>
+        </header>
       </div>
       <div id="loading"><p>loading</p></div>
       <div id="log">
