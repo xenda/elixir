@@ -36,15 +36,14 @@ function roll(notation)
 			for (i; i >= 0; --i)
 				total += attachment[i] * 1;
 
-			modifierLog += elements[3] + " = " + total;
+			modifierLog += elements[3] + ' = <span class="roll-result">' + total + '</span>';
 		}
 	}
 
-	var message = total >= range ? " (CRITICAL SUCCESS)"
-				: total == times ? " (CRITICAL FAILURE)"
+	var message = total >= range ? " (critical success)"
+				: total == times ? " (critical failure)"
 				: "";
-
-	return result + modifierLog + message;
+	return '<span class="roll-result">' + result + '</span> ' + modifierLog + message;
 }
 
 //  CUT  ///////////////////////////////////////////////////////////////////
@@ -298,9 +297,7 @@ function addMessage(from, text, time, _class)
 
 				: flags && flags[1] == "/roll"      ?   '<tr>' +
 														'   <td class="date">' + util.timeString(time) + '</td>' +
-														'   <td class="nick">' + from + ' rolls "' + flags[2] + '": <span class="roll-result">' + roll(flags[2]) + '</span></td>' +
-														'   <td class="msg-text>.</td>' +
-														'</tr>'
+														'   <td class="msg-text roll">' + from + ' rolls "' + flags[2] + '": ' + roll(flags[2]) + '</td></tr>'
 				: '<tr>'
 				+ '  <td class="date">' + util.timeString(time) + '</td>'
 				+ '  <td class="nick">' + util.toStaticHTML(from) + '</td>'

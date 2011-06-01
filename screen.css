@@ -33,9 +33,10 @@ table {
 table:nth-child(even) {
   background: #eee;
 }
-td.date, td.nick {
+td.date, td.nick, td.roll {
   font-family: monaco, monospace;
-  font-size: 10px;
+  font-size: 10px; }
+td.date, td.nick {
   width: 40px; }
 td.nick {
   width: 80px; }
@@ -175,5 +176,4 @@ span.roll-result {
   color: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
