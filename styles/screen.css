@@ -161,14 +161,38 @@ h1, .branding p,.branding form {
 
 /* Rolls */
 @-webkit-keyframes roll-action {
-  0% {
+  from {
     -webkit-transform: scale(2);
     opacity: 0; }
-  100% {
+  to {
     -webkit-transform: scale(1);
+    opacity: 1; } }
+@-moz-keyframes roll-action {
+  from {
+    -moz-transform: scale(2);
+    opacity: 0; }
+  to {
+    -moz-transform: scale(1);
+    opacity: 1; } }
+@-o-keyframes roll-action {
+  from {
+    -o-transform: scale(2);
+    opacity: 0; }
+  to {
+    -o-transform: scale(1);
+    opacity: 1; } }
+@keyframes roll-action {
+  from {
+    transform: scale(2);
+    opacity: 0; }
+  to {
+    transform: scale(1);
     opacity: 1; } }
 span.roll-result {
   -webkit-animation: roll-action 0.25s;
+  -moz-animation: roll-action 0.25s;
+  -o-animation: roll-action 0.25s;
+  animation: roll-action 0.25s;
   display: inline-block;
   text-align: center;
   padding: 0 3px;
