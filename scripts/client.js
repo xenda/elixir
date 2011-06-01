@@ -297,7 +297,7 @@ function addMessage(from, text, time, _class)
 
 				: flags && flags[1] == "/roll"      ?   '<tr>' +
 														'   <td class="date">' + util.timeString(time) + '</td>' +
-														'   <td class="msg-text roll">' + from + ' rolls "' + flags[2] + '": ' + roll(flags[2]) + '</td></tr>'
+														'   <td class="msg-text roll">' + from + ' rolls "' + flags[2] + '": ' + roll(flags[2]) + '<audio src="roll.mp3" autobuffer></audio></td></tr>'
 				: '<tr>'
 				+ '  <td class="date">' + util.timeString(time) + '</td>'
 				+ '  <td class="nick">' + util.toStaticHTML(from) + '</td>'

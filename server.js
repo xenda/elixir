@@ -135,12 +135,13 @@ setInterval(function ()
 fu.listen(Number(process.env.PORT || PORT), HOST);
 
 fu.get("/", fu.staticHandler("index.html"));
-fu.get("/reset.css", fu.staticHandler("reset.css"));
-fu.get("/screen.css", fu.staticHandler("screen.css"));
-fu.get("/client.js", fu.staticHandler("client.js"));
-fu.get("/jquery.js", fu.staticHandler("jquery.js"));
-fu.get("/elixir.png", fu.staticHandler("elixir.png"));
-fu.get("/elixir-chat.png", fu.staticHandler("elixir-chat.png"))
+fu.get("/styles/reset.css", fu.staticHandler("styles/reset.css"));
+fu.get("/styles/screen.css", fu.staticHandler("styles/screen.css"));
+fu.get("/scripts/client.js", fu.staticHandler("scripts/client.js"));
+fu.get("/scripts/jquery.js", fu.staticHandler("scripts/jquery.js"));
+fu.get("/images/elixir.png", fu.staticHandler("images/elixir.png"));
+fu.get("/images/elixir-chat.png", fu.staticHandler("images/elixir-chat.png"));
+fu.get("/assets/roll.mp3"), fu.staticHandler("assets/roll.mp3");
 
 
 fu.get("/who", function (req, res)
