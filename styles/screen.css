@@ -202,3 +202,13 @@ span.roll-result {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
+
+hr.fadein {
+  position: fixed;
+  width: 600px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: url('../images/fadein.png');
+  bottom:35px; }

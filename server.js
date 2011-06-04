@@ -141,6 +141,7 @@ fu.get("/scripts/client.js", fu.staticHandler("scripts/client.js"));
 fu.get("/scripts/jquery.js", fu.staticHandler("scripts/jquery.js"));
 fu.get("/images/elixir.png", fu.staticHandler("images/elixir.png"));
 fu.get("/images/elixir-chat.png", fu.staticHandler("images/elixir-chat.png"));
+fu.get("/images/fadein.png", fu.staticHandler("images/fadein.png"));
 fu.get("/assets/roll.mp3"), fu.staticHandler("assets/roll.mp3");
 
 
